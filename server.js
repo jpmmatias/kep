@@ -1,0 +1,15 @@
+const express = require('express');
+const app = express();
+const users = require('./routes/users');
+const contacts = require('./routes/contacts');
+const auth = require('./routes/auth');
+
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => res.json({msg: 'Wellcome to the Kep API'}));
+
+app.use('/api/users', users);
+app.use('/api/contacts', contacts);
+app.use('/api/auth', auth);
+
+app.listen(PORT, () => console.log(`Listining at port ${PORT}`));
