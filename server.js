@@ -9,6 +9,8 @@ const PORT = process.env.PORT || 3000;
 
 connectDB();
 
+app.use(express.json({extended: false}));
+
 app.get('/', (req, res) => res.json({msg: 'Wellcome to the Kep API'}));
 
 app.use('/api/users', users);
