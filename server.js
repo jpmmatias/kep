@@ -3,8 +3,11 @@ const app = express();
 const users = require('./routes/users');
 const contacts = require('./routes/contacts');
 const auth = require('./routes/auth');
+const connectDB = require('./config/db');
 
 const PORT = process.env.PORT || 3000;
+
+connectDB();
 
 app.get('/', (req, res) => res.json({msg: 'Wellcome to the Kep API'}));
 
