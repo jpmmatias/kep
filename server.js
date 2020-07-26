@@ -5,7 +5,7 @@ const contacts = require('./routes/contacts');
 const auth = require('./routes/auth');
 const connectDB = require('./config/db');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 connectDB();
 
