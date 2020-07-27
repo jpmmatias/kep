@@ -1,13 +1,17 @@
 import React, {useContext, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import AuthContext from '../../context/auth/authContext';
+import ContactContext from '../../context/contact/contactContext';
 import {Link} from 'react-router-dom';
-
 const Navbar = ({title, icon}) => {
 	const authContext = useContext(AuthContext);
 	const {logout, user, isAuthenticated} = authContext;
 
+	const contactContext = useContext(ContactContext);
+	const {clearContacts} = contactContext;
+
 	const onLogout = () => {
+		clearContacts();
 		logout();
 	};
 
@@ -15,10 +19,10 @@ const Navbar = ({title, icon}) => {
 		<Fragment>
 			<li>Hello {user && user.name}</li>
 			<li>
-				<a onClick={onLogout} href='#!'>
+				<Link onClick={onLogout} to='/'>
 					<i className='fas fa-sign-out-alt'></i>{' '}
 					<span className='hide-sm'>Logout</span>
-				</a>
+				</Link>
 			</li>
 		</Fragment>
 	);

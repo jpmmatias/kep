@@ -5,3 +5,6 @@ export const FILTER_CONTACTS = 'FILTER_CONTACT';
 export const CLEAR_FILTER = 'CLEAR_FILTER';
 export const SET_CURRENT = 'CLEAR_CURRENT';
 export const CLEAR_CURRENT = 'CLEAR_CURRENT';
+export const CONTACT_ERROR = 'CONTACT_ERROR';
+export const GET_CONTACTS = 'GET_CONTACTS';
+export const CLEAR_CONTACT = 'CLEAR_CONTACT';
