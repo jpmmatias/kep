@@ -17,11 +17,13 @@ const Navbar = ({title, icon}) => {
 
 	const authLinks = (
 		<Fragment>
-			<li>Hello {user && user.name}</li>
+			<li>Olá {user && user.name}</li>
 			<li>
 				<Link onClick={onLogout} to='/'>
 					<i className='fas fa-sign-out-alt'></i>{' '}
-					<span className='hide-sm'>Logout</span>
+					<span className='hide-sm' style={{marginRight: '140px'}}>
+						Logout
+					</span>
 				</Link>
 			</li>
 		</Fragment>
@@ -32,7 +34,9 @@ const Navbar = ({title, icon}) => {
 				<Link to='/register'>Sign In</Link>
 			</li>
 			<li>
-				<Link to='/login'>Login</Link>
+				<Link to='/login'>
+					<span style={{marginRight: '140px'}}>Login</span>
+				</Link>
 			</li>
 		</Fragment>
 	);
@@ -40,7 +44,7 @@ const Navbar = ({title, icon}) => {
 		<div className='navbar bg-primary'>
 			<h1>
 				<Link to='/'>
-					<i className={icon} /> {title}
+					<span style={{marginLeft: '140px'}}>{title}</span>
 				</Link>
 			</h1>
 			<ul>{isAuthenticated ? authLinks : guestLinks}</ul>
@@ -55,7 +59,6 @@ Navbar.propTypes = {
 
 Navbar.defaultProps = {
 	title: 'Kep',
-	icon: 'fas fa-id-card-alt',
 };
 
 export default Navbar;

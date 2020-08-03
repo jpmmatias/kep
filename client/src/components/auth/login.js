@@ -59,7 +59,7 @@ const Login = (props) => {
 					/>
 				</div>
 				<div className='form-group'>
-					<label htmlFor='password'>Password</label>
+					<label htmlFor='password'>Senha</label>
 					<input
 						type='password'
 						name='password'
@@ -70,8 +70,9 @@ const Login = (props) => {
 				</div>
 				<input
 					type='submit'
+					style={{padding: '1% 20%', margin: '5% 0'}}
 					value='Login'
-					className='btn btn-primary btn-block'
+					className='nes-btn is-primary'
 				/>
 			</form>
 		</div>

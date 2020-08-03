@@ -24,7 +24,8 @@ const ContactFilter = () => {
 			<input
 				type='text'
 				onChange={handleChange}
-				placeholder='Filter Contacts'
+				style={{margin: '5% 0'}}
+				placeholder='Filtrar contatos'
 				name='filtered'
 				ref={text}
 			></input>

@@ -13,13 +13,13 @@ const ContactItem = ({contact}) => {
 	};
 
 	return (
-		<div className='card bg-light'>
+		<div className='card nes-container is-rounded bg-light'>
 			<h3 className='text-primary text-left'>
 				{name}{' '}
 				<span
 					style={{float: 'right'}}
 					className={
-						'badge ' + (type === 'personal' ? 'badge-success' : 'badge-primary')
+						'badge ' + (type === 'pessoal' ? 'badge-success' : 'badge-primary')
 					}
 				>
 					{type.charAt(0).toUpperCase() + type.slice(1)}
@@ -40,12 +40,13 @@ const ContactItem = ({contact}) => {
 			<p>
 				<button
 					onClick={() => setCurrent(contact)}
-					className='btn btn-dark btn-sm'
+					style={{marginRight: '2%'}}
+					className='nes-btn btn-sm'
 				>
-					Edit
+					Editar
 				</button>
-				<button onClick={onDelete} className='btn btn-danger btn-sm'>
-					Delete
+				<button onClick={onDelete} className='btn-sm nes-btn is-error'>
+					Deletar
 				</button>
 			</p>
 		</div>

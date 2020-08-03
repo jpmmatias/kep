@@ -52,11 +52,11 @@ const Register = (props) => {
 	return (
 		<div className='form-container'>
 			<h1>
-				<span className='text-primary'>Register</span>
+				<span className='text-primary'>Registrar</span>
 			</h1>
 			<form onSubmit={handleSubmit}>
 				<div className='form-group'>
-					<label htmlFor='name'>Name</label>
+					<label htmlFor='name'>Nome</label>
 					<input
 						type='text'
 						name='name'
@@ -76,7 +76,7 @@ const Register = (props) => {
 					/>
 				</div>
 				<div className='form-group'>
-					<label htmlFor='password'>Password</label>
+					<label htmlFor='password'>Senha</label>
 					<input
 						type='password'
 						name='password'
@@ -87,7 +87,7 @@ const Register = (props) => {
 					/>
 				</div>
 				<div className='form-group'>
-					<label htmlFor='password2'>Confirm password</label>
+					<label htmlFor='password2'>Confirmar senha</label>
 					<input
 						type='password'
 						name='password2'
@@ -99,8 +99,9 @@ const Register = (props) => {
 				</div>
 				<input
 					type='submit'
-					value='Register'
-					className='btn btn-primary btn-block'
+					style={{padding: '1% 20%', margin: '5% 0'}}
+					value='Registrar'
+					className='nes-btn is-primary'
 				/>
 			</form>
 		</div>

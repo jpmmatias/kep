@@ -51,58 +51,90 @@ const ContactForm = () => {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<h2 className='text-primary'>
-				{current ? 'Edit Contact' : 'Add contact'}
+			<h2 className='text-primary' style={{margin: '5% 0'}}>
+				{current ? 'Editar contato' : 'Add contato'}
 			</h2>
-			<input
-				type='text'
-				placeholder='Name'
-				name='name'
-				value={name}
-				onChange={handleChange}
-			/>
-			<input
-				type='email'
-				placeholder='Email'
-				name='email'
-				value={email}
-				onChange={handleChange}
-			/>
-			<input
-				type='text'
-				placeholder='Phone'
-				name='phone'
-				value={phone}
-				onChange={handleChange}
-			/>
-			<h5>Contact type</h5>
-			<input
-				type='radio'
-				name='type'
-				value='personal'
-				onChange={handleChange}
-				checked={type === 'personal'}
-			/>
-			Personal
-			<input
-				type='radio'
-				name='type'
-				onChange={handleChange}
-				value='professional'
-				checked={type === 'professional'}
-			/>
-			Professional
+			<div className='nes-field'>
+				<label htmlFor='name' style={{marginBottom: '2%'}}>
+					Nome
+				</label>
+				<input
+					type='text'
+					placeholder='Mario Bros'
+					className='nes-input'
+					name='name'
+					style={{marginBottom: '5%'}}
+					value={name}
+					onChange={handleChange}
+				/>
+			</div>
+			<div className='nes-field'>
+				<label htmlFor='email' style={{marginBottom: '2%'}}>
+					Email
+				</label>
+				<input
+					type='email'
+					placeholder='mariobros@nintendo.com'
+					name='email'
+					className='nes-input'
+					style={{marginBottom: '5%'}}
+					value={email}
+					class='nes-input'
+					onChange={handleChange}
+				/>
+			</div>
+			<div className='nes-field'>
+				<label htmlFor='phone' style={{marginBottom: '%'}}>
+					Numero
+				</label>
+				<input
+					type='text'
+					placeholder='99451999'
+					className='nes-input'
+					name='phone'
+					value={phone}
+					style={{marginBottom: '5%'}}
+					onChange={handleChange}
+				/>
+			</div>
+			<h5 style={{marginBottom: '2%'}}>Tipo de contato</h5>
+			<label>
+				<input
+					type='radio'
+					name='type'
+					value='pessoal'
+					className='nes-radio'
+					style={{marginBottom: '5%'}}
+					onChange={handleChange}
+					checked={type === 'pessoal'}
+				/>
+				<span>Pessoal</span>
+			</label>
+			<label>
+				<input
+					type='radio'
+					name='type'
+					className='nes-radio'
+					onChange={handleChange}
+					value='profissional'
+					style={{marginBottom: '5%'}}
+					checked={type === 'profissional'}
+				/>
+				<span>Profissional</span>
+			</label>
+
 			<div>
 				<input
 					type='submit'
-					value={current ? 'Edit Contact' : 'Add contact'}
-					className='btn btn-primary btn-block'
+					style={{marginTop: '5%', padding: '1% 10%'}}
+					value={current ? 'Editar Contato' : 'Add contato'}
+					className='nes-btn is-primary'
 				/>
 			</div>
 			{current && (
 				<div>
 					<button onClick={clearAll} className='btn btn-light btn-block'>
-						Clear
+						Limpar
 					</button>
 				</div>
 			)}
